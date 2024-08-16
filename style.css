@@ -1,0 +1,336 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #bcc1cf;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85px; /* Set initial width */
+    height: 100%;
+    display: flex;
+    background: #161a2d;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding: 25px 20px;
+    transition: width 0.4s ease; /* Smooth transition for width */
+}
+
+.sidebar:hover {
+    width: 250px; /* Set expanded width */
+}
+
+.sidebar .side-header {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;
+    color: #fff;
+}
+
+.sidebar .side-header img {
+    border: 2px solid #bcc1cf;
+    border-radius: 50%;
+    width: 50px; /* Smaller width initially */
+    transition: width 0.4s ease; /* Smooth transition for image size */
+}
+
+.sidebar:hover .side-header img {
+    width: 100px; /* Larger width on hover */
+}
+
+.sidebar .side-header h2,
+.sidebar .side-header h3 {
+    color: #fff;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.4s ease; /* Smooth transition for text opacity */
+}
+
+.sidebar:hover .side-header h2,
+.sidebar:hover .side-header h3 {
+    opacity: 1; /* Show text on hover */
+}
+
+.sidebar .side-header h2 {
+    font-size: 1.25rem;
+    margin-top: 10px; /* Add margin to separate from image */
+}
+
+.sidebar .side-header h3 {
+    font-size: 1rem;
+    margin-top: 5px; /* Add margin to separate from h2 */
+}
+
+.sidebar-links {
+    list-style: none;
+    height: 80%;
+    margin-top: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar-links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-links h4 {
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    margin: 10px 0;
+}
+
+.sidebar-links h4 span {
+    opacity: 0;
+    transition: opacity 0.4s ease; /* Smooth transition for span opacity */
+}
+
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1; /* Show span on hover */
+}
+
+.sidebar-links .menu-separator {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    transform: translateY(-50%);
+    transform: scaleX(1);
+    transition: transform 0.2s;
+    transform-origin: right;
+}
+
+.sidebar:hover .sidebar-links .menu-separator {
+    transform: scaleX(0);
+    transition-delay: 0s;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 0 25px;
+    white-space: nowrap;
+    padding: 15px 10px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.sidebar-links li a:hover {
+    color: #161a2d;
+    border-radius: 4px;
+    background: #fff;
+}
+
+
+
+.video-container {
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px; 
+    width: 100%;
+    text-align: center;
+}
+
+.video-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+body {
+    min-height: 100vh;
+    background: #bcc1cf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-content {
+    margin-left: 260px; /* Adjust according to sidebar width */
+    padding: 20px;
+    background: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.main-content section {
+    margin-bottom: 30px;
+}
+
+.main-content h1, .main-content h2 {
+    color: #161a2d; /* Dark color for headings */
+    font-family: 'Arial', sans-serif;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.main-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Text Styling */
+.main-content p, .main-content ul {
+    line-height: 1.6;
+}
+
+.introduction, .skills, .projects-summary, .quick-links, .social-media, .news-updates {
+    margin-bottom: 30px;
+}
+
+.introduction img {
+    border-radius: 50%;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.introduction h1, .introduction h2 {
+    text-align: center;
+}
+
+
+.main-content ul {
+    padding-left: 20px;
+}
+
+.main-content ul li {
+    margin-bottom: 10px;
+}
+
+/* Links Styling */
+.main-content a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none;
+}
+
+.main-content a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+    background: #007bff; /* Blue button background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quick-links a, .social-media a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background: #161a2d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.quick-links a:hover, .social-media a:hover {
+    background: #414965;
+}
+
+.project {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.project {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+    padding: 20px;
+    width: 100%;
+}
+
+.project h2 {
+    margin-top: 0;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.project p {
+    margin: 10px 0;
+}
+
+.project a {
+    color: #161a2d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
